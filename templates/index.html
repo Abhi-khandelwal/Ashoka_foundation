@@ -9,31 +9,32 @@
 
 
     <!-- normalizing_file -->
-    <link rel="stylesheet" href="support/css/normalize.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='support/css/normalize.css') }}">
 
 
     <!-- grid_file -->
-    <link rel="stylesheet" href="support/css/grid.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='support/css/grid.css') }}">
 
 
     <!--animate_file -->
-    <link rel="stylesheet" href="support/css/animate.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='support/css/animate.css') }}">
 
 
     <!-- style_sheet_link -->
-    <link rel="stylesheet" href="resources/css/main.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='resources/css/main.css') }}">
 
 
     <!-- google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,400i,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    
+<link href="{{ url_for('static', filename='https://fonts.googleapis.com/css?family=Lato:100,300,400,400i,700') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='https://fonts.googleapis.com/css?family=Indie+Flower') }}" rel="stylesheet">
 
 
     <!-- icons -->
-    <link rel="stylesheet" href="support/fonts/css/fa-brands.css">
-    <link rel="stylesheet" href="support/fonts/css/fontawesome.css">
-    <link rel="stylesheet" href="support/fonts/css/fa-regular.css">
-    <link rel="stylesheet" href="support/fonts/css/fa-solid.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='support/fonts/css/fa-brands.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='support/fonts/css/fontawesome.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='support/fonts/css/fa-regular.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='support/fonts/css/fa-solid.css') }}">
 
 
 </head>
@@ -134,7 +135,7 @@
 
             <div class="row sec3_part1">
                 <div class=" box">
-                    <img class="js--wp4--img1" src="resources/css/imgs/share.svg" alt="">
+                    <img class="js--wp4--img1" src="{{ url_for('static', filename='resources/css/imgs/share.svg') }}" alt="">
                     <h3>Empathy</h3>
                     <p>Empathy is crucial in a world where rules cant keep pace with the speed and complexity of change. Empathy
                         based ethics are fast becoming the cornerstone of our everyday dealings</p>
@@ -142,7 +143,7 @@
 
 
                 <div class=" box">
-                    <img class="js--wp4--img2" src="resources/css/imgs/team.svg" alt="">
+                    <img class="js--wp4--img2" src="{{ url_for('static', filename='resources/css/imgs/team.svg') }}" alt="">
                     <h3>Leadership</h3>
                     <p>Leadership requires that every player on the team must be an initiator. Each person should see the bigger
                         picture and advance solutions that contribute to positive social outcomes</p>
@@ -150,7 +151,7 @@
 
 
                 <div class=" box">
-                    <img class="js--wp4--img3" src="resources/css/imgs/teamwork.svg" alt="">
+                    <img class="js--wp4--img3" src="{{ url_for('static', filename='resources/css/imgs/teamwork.svg') }}" alt="">
                     <h3>Team Work</h3>
                     <p> Team work rlies on everyone having the capacity to work in fluids, open teams of teams to see and seize
                         every opportunity offered.
@@ -159,7 +160,7 @@
 
 
                 <div class=" box">
-                    <img class="js--wp4--img4" src="resources/css/imgs/shuffle1.svg" alt="">
+                    <img class="js--wp4--img4" src="{{ url_for('static', filename='resources/css/imgs/shuffle1.svg') }}" alt="">
                     <h3>Changemaking</h3>
                     <p>It is the capacity to freely and effectively innovate for the good of all..</p>
                 </div>
@@ -179,13 +180,13 @@
         </div>
 
         <div class="row">
-            <form action="#" method="post" class="contact_form">
+            <form action="http://127.0.0.1:5000/forms" method="POST" class="contact_form">
                 <div class="row">
                     <div class="col span-1-of-3">
                         <label for="name">School Name</label>
                     </div>
                     <div class="col span-2-of-3">
-                        <input type="text" name="name" id="school_name" placeholder="School Name" required>
+                        <input type="text" name="Sname" id="school_name" placeholder="School Name" required>
                     </div>
 
                     <div class="row">
@@ -201,7 +202,7 @@
                                 <label for="email">Email</label>
                             </div>
                             <div class="col span-2-of-3">
-                                <input type="email" name="name" id="email" placeholder="Your email" required>
+                                <input type="email" name="email" id="email" placeholder="Your email" required>
                             </div>
 
                             <div class="row">
@@ -209,7 +210,7 @@
                                     <label for="phone_number">Phone Number</label>
                                 </div>
                                 <div class="col span-2-of-3">
-                                    <input type="number" name="phone_number" id="phone_number" placeholder="Your Phone Number" required>
+                                    <input type="number" name="phone" id="phone_number" placeholder="Your Phone Number" required>
                                 </div>
 
                                 <div class="row">
@@ -225,9 +226,9 @@
                                             <label for="news">What are you applying for?</label>
                                         </div>
                                         <div class="col span-2-of-3">
-                                            <input type="checkbox" name="news" id="news" checked required>workshops
+                                            <input type="checkbox" name="news1" id="news" >workshops
                                             <br>
-                                            <input type="checkbox" name="news" id="news" checked required>Changemaker club
+                                            <input type="checkbox" name="news1" id="news" >Changemaker club
                                         </div>
 
                                         <div class="row">
@@ -246,7 +247,7 @@
                                                         <label for="news">&nbsp</label>
                                                     </div>
                                                     <div class="col span-2-of-3">
-                                                        <input type="button" value="Apply" required>
+                                                        <input type="submit" value="submit" >
                                                     </div>
                                                 </div>
 
@@ -299,11 +300,13 @@
         </div>
 
         <div class="row">
+            <form action="http://127.0.0.1:5000/querry" method="POST" >
+            <div class="row">
             <div class="col span-1-of-3">
                 <label for="name">Name</label>
             </div>
             <div class="col span-2-of-3">
-                <input type="text" name="name" id="your_name" placeholder="Your Name" required>
+                <input type="text" name="name1" id="your_name" placeholder="Your Name" required>
             </div>
 
 
@@ -312,7 +315,7 @@
                     <label for="name">Emial-Id</label>
                 </div>
                 <div class="col span-2-of-3">
-                    <input type="email" name="email" id="email" placeholder="Your Email-Id" required>
+                    <input type="email" name="email1" id="email" placeholder="Your Email-Id" required>
                 </div>
 
 
@@ -321,7 +324,7 @@
                         <label for="name">Phone Number</label>
                     </div>
                     <div class="col span-2-of-3">
-                        <input type="number" name="name" id="school_name" placeholder="Your Phone Number" required>
+                        <input type="number" name="phone1" id="school_name" placeholder="Your Phone Number" required>
                     </div>
                     <div class="row">
                             <div class="col span-1-of-3">
@@ -338,9 +341,11 @@
 
                                     <!-- input button is following sec4 button styling -->
                                     <div class="col span-2-of-3">
-                                            <input type="button" value="send" required>
+                                            <input type="submit" value="submit" >
                                     </div>
                                 </div>
+    </form>
+</div>
     </section>
     <!-- ````````````````````````sixth_section_contact_us end````` -->
 
@@ -366,13 +371,13 @@
     <!-- ````````````````````````seventh_section end````` -->
 
     <!-- ``````````````````````````links_start`````````````````````````` -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="{{url_for('static',filename='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js') }}"></script>
 
-    <script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
-    <script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="//cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
-    <script src="support/js/jquery.waypoints.min.js "></script>
-    <script src="resources/js/script.js"></script>
+    <script src="{{url_for('static',filename='//cdn.jsdelivr.net/respond/1.4.2/respond.min.js') }}"></script>
+    <script src="{{url_for('static',filename='//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js') }}"></script>
+    <script src="{{url_for('static',filename='//cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js') }}"></script>
+    <script src="{{url_for('static',filename='support/js/jquery.waypoints.min.js') }}"></script>
+    <script src="{{url_for('static',filename='resources/js/script.js') }}"></script>
     <!-- ``````````````````````````links_start`````````````````````````` -->
 
 </body>
